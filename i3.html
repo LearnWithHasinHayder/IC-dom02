@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+</head>
+
+<body class="prose">
+    <h1 class="text-red-600">Tailwind Example</h1>
+
+    <div class="flex space-x-5">
+        <img class="thumb" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/tree-with-brown-fall-leaves-against-blue-sky-free-image.jpg?w=210&quality=70" large="https://i0.wp.com/picjumbo.com/wp-content/uploads/tree-with-brown-fall-leaves-against-blue-sky-free-image.jpg?w=1210&quality=70" alt="">
+        <img class="thumb" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/hero-image-autumn-leaves-on-flat-blue-background-free-image.jpg?w=210&quality=70" large="https://i0.wp.com/picjumbo.com/wp-content/uploads/hero-image-autumn-leaves-on-flat-blue-background-free-image.jpg?w=1210&quality=70" alt="">
+        <img class="thumb" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/autumn-leaves-on-flat-blue-background-with-room-for-text-free-image.jpg?w=210&quality=70" large="https://i0.wp.com/picjumbo.com/wp-content/uploads/autumn-leaves-on-flat-blue-background-with-room-for-text-free-image.jpg?w=1210&quality=70" alt="">
+    </div>
+
+    <div id="bigger">
+    
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.thumb');
+        const bigger = document.getElementById('bigger');
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const large = this.getAttribute('large');
+                const img = document.createElement('img');
+                img.src = large;
+                img.style.width = '100%';
+                bigger.innerHTML = '';
+                bigger.appendChild(img);
+            })
+        })
+        
+    </script>
+</body>
+
+</html>

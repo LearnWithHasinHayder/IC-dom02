@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+</head>
+<body>
+    <h1>Input Events</h1>
+
+    Type Something:
+    <input type="text" id="name" placeholder="Enter your name">
+    
+    <script>
+        const name = document.getElementById('name');
+        // name.addEventListener('input', function() {
+        //     console.log(this.value);
+        // })
+
+        //keydown
+        name.addEventListener('keydown', function(event) {
+            const keyCode = event.keyCode;
+            console.log(keyCode);
+            console.log(event)
+        })
+    </script>
+</body>
+</html>

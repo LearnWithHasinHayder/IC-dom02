@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    <div id="click" style="height:200px;width:200px;background-color: aqua">
+        
+    </div>
+    
+    <script>
+
+        const div = document.getElementById('click');
+        div.addEventListener('mouseenter',function(){
+            console.log('entered');
+        })
+
+        div.addEventListener('mouseleave',function(){
+            console.log('left');
+        })
+
+        // div.addEventListener('mousemove',function(event){
+        //     console.log(event.clientX,event.clientY);
+        // })
+
+        div.addEventListener('click',function(){
+            const randomRed = Math.random()*255;
+            const randomGreen = Math.random()*255;
+            const randomBlue = Math.random()*255;
+            div.style.backgroundColor = `rgb(${randomRed},${randomGreen},${randomBlue})`;
+        })
+    </script>
+</body>
+</html>
